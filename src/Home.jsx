@@ -1,6 +1,16 @@
+import homeMobileBg from "./assets/home/background-home-mobile.jpg";
+import homeTabletBg from "./assets/home/background-home-tablet.jpg";
+import homeDesktopBg from "./assets/home/background-home-desktop.jpg";
+
 const Home = () => {
   return (
-    <div className="pageContainer bg-homeMobile md:bg-homeTablet lg:bg-homeDesktop bg-cover">
+    <div
+      className="pageContainer 
+    bg-[url('./src/assets/home/background-home-mobile.jpg')]
+     md:bg-[url('./src/assets/home/background-home-tablet.jpg')] 
+     lg:bg-[url('./src/assets/home/background-home-desktop.jpg')]
+      bg-cover"
+    >
       <div className="textSection mt-28 lg:mt-0 ">
         <h3 className="smallHeading text-xl text-slate-500">
           so,you want to travel to

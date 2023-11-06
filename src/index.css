@@ -80,7 +80,7 @@ nav {
 }
 
 .crewImg {
-  @apply h-96 absolute bottom-0 left-1/4 lg:ml-20;
+  @apply h-96 hidden lg:block absolute bottom-0 right-0;
 }
 
 /* TECHNOLOGY */
@@ -93,5 +93,5 @@ nav {
 }
 
 .techImg {
-  @apply h-96 block mx-auto lg:ml-auto;
+  @apply h-96 block mx-auto lg:mx-0 lg:ml-auto;
 }

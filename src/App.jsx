@@ -14,7 +14,7 @@ function App() {
     <div className="app">
       <Router>
         <header>
-          <div className="logoGrp">
+          <div className="logoGrp ">
             <img src={logo} alt="logo" className="lg:h-10 h-8 w-8" />
 
             <img src={menu} alt="" className="md:hidden" />

@@ -9,7 +9,12 @@ const Technology = () => {
   const [techHeading, setTechHeading] = useState(0);
 
   return (
-    <div className="text-white pt-10 px-10 lg:pl-20 flex flex-col gap-20 lg:gap-0 lg:flex-row lg:justify-between lg:items-center   h-auto lg:h-screen w-screen bg-technologyMobile md:bg-technologyTablet lg:bg-technologyDesktop   ">
+    <div
+      className="text-white pt-10 px-10 lg:px-0 lg:pl-20 flex flex-col gap-20 lg:gap-0 lg:flex-row lg:justify-between lg:items-center   h-auto lg:h-screen w-screen 
+    bg-[url('./src/assets/technology/background-technology-mobile.jpg')]
+     md:bg-[url('./src/assets/technology/background-technology-tablet.jpg')] 
+     lg:bg-[url('./src/assets/technology/background-technology-desktop.jpg')]   "
+    >
       <div className="textSection mt-20 lg:mt-0">
         <div className="imgHeading">
           <span className="text-slate-600">03 </span>

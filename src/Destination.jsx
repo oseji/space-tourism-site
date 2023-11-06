@@ -13,7 +13,12 @@ const Destination = () => {
   const [destinationNum, setDestinationNum] = useState(0);
 
   return (
-    <div className="pageContainer bg-destinationMobile md:bg-destinationTablet lg:bg-destinationDesktop bg-cover">
+    <div
+      className="pageContainer bg-[url('./src/assets/destination/background-destination-mobile.jpg')]
+     md:bg-[url('./src/assets/destination/background-destination-tablet.jpg')] 
+     lg:bg-[url('./src/assets/destination/background-destination-desktop.jpg')]
+      bg-cover"
+    >
       <div className="imgSection mt-20 lg:mt-0 ">
         <div className="imgHeading">
           <span className="text-slate-600">01 </span>
