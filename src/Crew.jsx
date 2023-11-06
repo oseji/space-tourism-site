@@ -9,12 +9,7 @@ import Douglas from "./assets/crew/image-douglas-hurley.png";
 const Crew = () => {
   const [crewNum, setCrewNum] = useState(3);
   return (
-    <div
-      className="pageContainer bg-[url('./src/assets/crew/background-crew-mobile.jpg')]
-     md:bg-[url('./src/assets/crew/background-crew-tablet.jpg')]
-      lg:bg-[url('./src/assets/crew/background-crew-desktop.jpg')]   
-      relative"
-    >
+    <div className="pageContainer  relative">
       <div className="textSection mt-20 lg:mt-0">
         <div className="imgHeading">
           <span className="text-slate-600">02 </span>

@@ -4,18 +4,12 @@ import homeDesktopBg from "./assets/home/background-home-desktop.jpg";
 
 const Home = () => {
   return (
-    <div
-      className="pageContainer 
-    bg-[url('./src/assets/home/background-home-mobile.jpg')]
-     md:bg-[url('./src/assets/home/background-home-tablet.jpg')] 
-     lg:bg-[url('./src/assets/home/background-home-desktop.jpg')]
-      bg-cover"
-    >
+    <div className="pageContainer">
       <div className="textSection mt-28 lg:mt-0 ">
         <h3 className="smallHeading text-xl text-slate-500">
           so,you want to travel to
         </h3>
-        <h1 className="bigHeading text-10xl">space</h1>
+        <h1 className="bigHeading text-7xl lg:text-10xl">space</h1>
 
         <p className="text">
           Let's face it; if you want to go to space, you might as well genuinely
@@ -24,7 +18,7 @@ const Home = () => {
           experience!
         </p>
       </div>
-      <div className="imgSection mt-36 lg:mt-0">
+      <div className="imgSection mt-20 lg:mt-0">
         <button className="exploreBtn">EXPLORE</button>
       </div>
     </div>
