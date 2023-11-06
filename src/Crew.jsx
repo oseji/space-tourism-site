@@ -8,6 +8,8 @@ import Douglas from "./assets/crew/image-douglas-hurley.png";
 
 const Crew = () => {
   const [crewNum, setCrewNum] = useState(3);
+  const [crewImg, setCrewImg] = useState(Anousheh);
+
   return (
     <div className="pageContainer  relative">
       <div className="textSection mt-20 lg:mt-0">
@@ -25,15 +27,39 @@ const Crew = () => {
         <p className="crewBio">{dataFile.crew[crewNum].bio}</p>
 
         <div className="crewSelection">
-          <div className="circle"></div>
-          <div className="circle"></div>
-          <div className="circle"></div>
-          <div className="circle"></div>
+          <div
+            className="circle"
+            onClick={() => {
+              setCrewNum(3);
+              setCrewImg(Anousheh);
+            }}
+          ></div>
+          <div
+            className="circle"
+            onClick={() => {
+              setCrewNum(2);
+              setCrewImg(Victor);
+            }}
+          ></div>
+          <div
+            className="circle"
+            onClick={() => {
+              setCrewNum(1);
+              setCrewImg(Mark);
+            }}
+          ></div>
+          <div
+            className="circle"
+            onClick={() => {
+              setCrewNum(0);
+              setCrewImg(Douglas);
+            }}
+          ></div>
         </div>
       </div>
 
       <div className="imgSection">
-        <img src={Anousheh} alt="" className="crewImg" />
+        <img src={crewImg} alt="" className="crewImg" />
       </div>
     </div>
   );

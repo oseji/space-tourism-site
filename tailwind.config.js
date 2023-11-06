@@ -7,6 +7,9 @@ export default {
         "10xl": "7.5rem",
         "7xl": "5.625rem",
       },
+      translate: {
+        120: "500px",
+      },
       backgroundImage: {
         homeMobile: "url('./src/assets/home/background-home-mobile.jpg')",
         homeTablet: "url('./src/assets/home/background-home-tablet.jpg')",

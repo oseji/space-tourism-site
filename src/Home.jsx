@@ -1,7 +1,3 @@
-import homeMobileBg from "./assets/home/background-home-mobile.jpg";
-import homeTabletBg from "./assets/home/background-home-tablet.jpg";
-import homeDesktopBg from "./assets/home/background-home-desktop.jpg";
-
 const Home = () => {
   return (
     <div className="pageContainer">
@@ -18,7 +14,7 @@ const Home = () => {
           experience!
         </p>
       </div>
-      <div className="imgSection mt-20 lg:mt-0">
+      <div className="imgSection mt-8 lg:mt-0">
         <button className="exploreBtn">EXPLORE</button>
       </div>
     </div>

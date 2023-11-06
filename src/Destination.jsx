@@ -7,10 +7,11 @@ import europa from "./assets/destination/image-europa.png";
 import titan from "./assets/destination/image-titan.png";
 
 const Destination = () => {
-  console.log(dataFile);
+  //console.log(dataFile);
 
   const [destinationName, setDestinationName] = useState("moon");
   const [destinationNum, setDestinationNum] = useState(0);
+  const [destinationImg, setDestinationImg] = useState(moon);
 
   return (
     <div className="pageContainer">
@@ -20,15 +21,51 @@ const Destination = () => {
           <h1>pick your destination</h1>
         </div>
 
-        <img src={moon} alt={destinationName} className="planetImg" />
+        <img src={destinationImg} alt={destinationName} className="planetImg" />
       </div>
 
       <div className="textSection">
         <div className="destinationSelection">
-          <p className="destination">Moon</p>
-          <p className="destination">Mars</p>
-          <p className="destination">Europa</p>
-          <p className="destination">Titan</p>
+          <p
+            className="destination"
+            onClick={(e) => {
+              setDestinationName("moon");
+              setDestinationNum(0);
+              setDestinationImg(moon);
+            }}
+          >
+            Moon
+          </p>
+          <p
+            className="destination"
+            onClick={(e) => {
+              setDestinationName("mars");
+              setDestinationNum(1);
+              setDestinationImg(mars);
+            }}
+          >
+            Mars
+          </p>
+          <p
+            className="destination"
+            onClick={(e) => {
+              setDestinationName("europa");
+              setDestinationNum(2);
+              setDestinationImg(europa);
+            }}
+          >
+            Europa
+          </p>
+          <p
+            className="destination"
+            onClick={(e) => {
+              setDestinationName("titan");
+              setDestinationNum(3);
+              setDestinationImg(titan);
+            }}
+          >
+            Titan
+          </p>
         </div>
 
         <h1 className="text-7xl font-bold uppercase">{destinationName}</h1>

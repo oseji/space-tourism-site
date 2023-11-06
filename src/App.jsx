@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useRef } from "react";
 import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
 
 import Home from "./Home";
@@ -10,6 +10,18 @@ import menu from "./assets/shared/icon-hamburger.svg";
 import closeMenu from "./assets/shared/icon-close.svg";
 
 function App() {
+  const menuRef = useRef(null);
+  const navRef = useRef(null);
+
+  const toggleMenu = () => {
+    const menuBtn = menuRef.current;
+    const nav = navRef.current;
+    console.log(menuBtn);
+
+    nav.classList.toggle("showNav");
+    nav.classList.toggle("hideNav");
+  };
+
   return (
     <div className="app">
       <Router>
@@ -17,10 +29,16 @@ function App() {
           <div className="logoGrp ">
             <img src={logo} alt="logo" className="lg:h-10 h-8 w-8" />
 
-            <img src={menu} alt="" className="md:hidden" />
+            <img
+              src={menu}
+              alt=""
+              className="md:hidden"
+              ref={menuRef}
+              onClick={toggleMenu}
+            />
           </div>
 
-          <nav>
+          <nav className="hideNav" ref={navRef}>
             <ul className="navList">
               <li className="navText">
                 <Link to="/">
