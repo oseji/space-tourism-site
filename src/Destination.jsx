@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { motion } from "framer-motion";
 import dataFile from "./data.json";
 
 import moon from "./assets/destination/image-moon.png";
@@ -15,16 +16,26 @@ const Destination = () => {
 
   return (
     <div className="pageContainer">
-      <div className="imgSection mt-10 lg:mt-0 ">
+      <motion.div
+        initial={{ x: 250, opacity: 0 }}
+        animate={{ x: 0, opacity: 1 }}
+        transition={{ duration: 0.5 }}
+        className="imgSection mt-10 lg:mt-0 "
+      >
         <div className="imgHeading">
           <span className="text-slate-600">01 </span>
           <h1>pick your destination</h1>
         </div>
 
         <img src={destinationImg} alt={destinationName} className="planetImg" />
-      </div>
+      </motion.div>
 
-      <div className="textSection">
+      <motion.div
+        initial={{ x: -250, opacity: 0 }}
+        animate={{ x: 0, opacity: 1 }}
+        transition={{ duration: 0.5 }}
+        className="textSection"
+      >
         <div className="destinationSelection">
           <p
             className="destination"
@@ -77,19 +88,19 @@ const Destination = () => {
         <div className="destinationInfo">
           <div>
             <p className="text-sm">AVG. DISTANCE</p>
-            <p className="text-3xl">
+            <p className="text-xl lg:text-3xl">
               {dataFile.destinations[destinationNum].distance}
             </p>
           </div>
 
           <div>
             <p className="text-sm">EST. TRAVEL TIME</p>
-            <p className="text-3xl">
+            <p className="text-xl lg:text-3xl">
               {dataFile.destinations[destinationNum].travel}
             </p>
           </div>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 };

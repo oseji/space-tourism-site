@@ -26,11 +26,11 @@ nav {
 }
 
 .navList {
-  @apply flex flex-col items-center md:items-start md:flex-row md:justify-center gap-7;
+  @apply flex flex-col items-center md:items-start md:flex-row md:justify-center gap-3 lg:gap-7;
 }
 
 .navText {
-  @apply cursor-pointer py-4 border-b-2 border-transparent hover:border-white transition ease-in-out duration-200;
+  @apply font-bold md:font-medium text-2xl md:text-base cursor-pointer py-4 border-b-2 border-transparent hover:border-white transition ease-in-out duration-200;
 }
 
 .pages {
@@ -57,7 +57,7 @@ nav {
 }
 
 .exploreBtn {
-  @apply bg-white mx-auto block text-black font-semibold text-xl px-20 py-24 rounded-full cursor-pointer;
+  @apply bg-white  mx-auto block text-black font-bold text-xl px-20 py-24 rounded-full cursor-pointer;
 }
 
 /* DESTINATION PAGE */
@@ -83,7 +83,7 @@ nav {
 
 /* CREW */
 .crewSelection {
-  @apply mx-auto md:mx-0 flex flex-row justify-center lg:justify-start gap-4 absolute bottom-0 pb-10;
+  @apply mx-auto md:mx-0 flex flex-row justify-center lg:justify-start gap-4 md:absolute md:bottom-0 py-10;
 }
 
 .circle {
@@ -91,7 +91,7 @@ nav {
 }
 
 .crewImg {
-  @apply h-96 hidden lg:block absolute bottom-0 right-20;
+  @apply h-96  md:absolute md:bottom-0 right-20;
 }
 
 /* TECHNOLOGY */
@@ -101,6 +101,10 @@ nav {
 
 .techNum {
   @apply py-5 px-7 rounded-full border-white border cursor-pointer;
+}
+
+.techNumActive {
+  @apply bg-white text-black;
 }
 
 .techImg {

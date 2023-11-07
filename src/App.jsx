@@ -1,5 +1,6 @@
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
+import { motion } from "framer-motion";
 
 import Home from "./Home";
 import Destination from "./Destination";
@@ -10,6 +11,8 @@ import menu from "./assets/shared/icon-hamburger.svg";
 import closeMenu from "./assets/shared/icon-close.svg";
 
 function App() {
+  const [menuImg, setMenuImg] = useState(menu);
+  const [isToggled, setIsToggled] = useState(false);
   const menuRef = useRef(null);
   const navRef = useRef(null);
 
@@ -18,6 +21,14 @@ function App() {
     const nav = navRef.current;
     console.log(menuBtn);
 
+    if (!isToggled) {
+      setMenuImg(closeMenu);
+      setIsToggled(true);
+    } else {
+      setMenuImg(menu);
+      setIsToggled(false);
+    }
+
     nav.classList.toggle("showNav");
     nav.classList.toggle("hideNav");
   };
@@ -25,13 +36,17 @@ function App() {
   return (
     <div className="app">
       <Router>
-        <header>
+        <motion.header
+          initial={{ y: -100, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.5 }}
+        >
           <div className="logoGrp ">
             <img src={logo} alt="logo" className="lg:h-10 h-8 w-8" />
 
             <img
-              src={menu}
-              alt=""
+              src={menuImg}
+              alt="hamburger menu"
               className="md:hidden"
               ref={menuRef}
               onClick={toggleMenu}
@@ -69,7 +84,7 @@ function App() {
               </li>
             </ul>
           </nav>
-        </header>
+        </motion.header>
 
         <div className="pages">
           <Switch>

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { motion } from "framer-motion";
 import dataFile from "./data.json";
 
 import Anousheh from "./assets/crew/image-anousheh-ansari.png";
@@ -12,7 +13,12 @@ const Crew = () => {
 
   return (
     <div className="pageContainer  relative">
-      <div className="textSection mt-20 lg:mt-0">
+      <motion.div
+        initial={{ x: 250, opacity: 0 }}
+        animate={{ x: 0, opacity: 1 }}
+        transition={{ duration: 0.5 }}
+        className="textSection mt-10 lg:mt-0"
+      >
         <div className="imgHeading">
           <span className="text-slate-600">02 </span>
           <h1>meet your crew</h1>
@@ -56,11 +62,16 @@ const Crew = () => {
             }}
           ></div>
         </div>
-      </div>
+      </motion.div>
 
-      <div className="imgSection">
+      <motion.div
+        // initial={{ x: -250, opacity: 0 }}
+        // animate={{ x: 0, opacity: 1 }}
+        // transition={{ duration: 0.5 }}
+        className="imgSection"
+      >
         <img src={crewImg} alt="" className="crewImg" />
-      </div>
+      </motion.div>
     </div>
   );
 };

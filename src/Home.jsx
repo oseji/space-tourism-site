@@ -1,7 +1,14 @@
+import { motion } from "framer-motion";
+
 const Home = () => {
   return (
     <div className="pageContainer">
-      <div className="textSection mt-10 lg:mt-0 ">
+      <motion.div
+        initial={{ x: -250, opacity: 0 }}
+        animate={{ x: 0, opacity: 1 }}
+        transition={{ duration: 0.5 }}
+        className="textSection mt-10 lg:mt-0 "
+      >
         <h3 className="smallHeading text-xl text-slate-500">
           so,you want to travel to
         </h3>
@@ -13,9 +20,17 @@ const Home = () => {
           back, and relax because we'll give you a truly out of this world
           experience!
         </p>
-      </div>
+      </motion.div>
+
       <div className="imgSection mt-8 lg:mt-0">
-        <button className="exploreBtn">EXPLORE</button>
+        <motion.button
+          initial={{ rotate: -180, opacity: 0, x: 250 }}
+          animate={{ rotate: 0, opacity: 1, x: 0 }}
+          transition={{ duration: 0.5 }}
+          className="exploreBtn"
+        >
+          EXPLORE
+        </motion.button>
       </div>
     </div>
   );
