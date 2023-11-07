@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+.app {
+  @apply h-full bg-black;
+}
+
 header {
   @apply flex flex-col md:flex-row md:justify-between md:items-center p-5 md:p-0 md:pl-10 text-white      relative lg:top-5 z-10;
 }
@@ -15,7 +19,7 @@ nav {
 }
 
 .hideNav {
-  @apply -translate-y-120 md:-translate-y-0;
+  @apply -translate-y-120 md:-translate-y-0 h-0 lg:h-auto;
 }
 .showNav {
   @apply translate-y-6 md:translate-y-0;
@@ -35,7 +39,7 @@ nav {
 
 /* HOME */
 .pageContainer {
-  @apply text-white py-10 px-10 lg:py-0 lg:px-20 flex flex-col lg:flex-row lg:justify-between lg:items-center gap-10 lg:gap-0  w-screen    h-screen  bg-black;
+  @apply text-white pb-10 pt-28 px-10 lg:pb-0 lg:pt-0 lg:px-20 flex flex-col lg:flex-row lg:justify-between lg:items-center gap-10 lg:gap-0  w-screen    lg:h-screen bg-black;
 }
 
 .textSection,

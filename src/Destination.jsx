@@ -15,7 +15,7 @@ const Destination = () => {
 
   return (
     <div className="pageContainer">
-      <div className="imgSection mt-20 lg:mt-0 ">
+      <div className="imgSection mt-10 lg:mt-0 ">
         <div className="imgHeading">
           <span className="text-slate-600">01 </span>
           <h1>pick your destination</h1>

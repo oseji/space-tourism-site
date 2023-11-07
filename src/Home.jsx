@@ -1,7 +1,7 @@
 const Home = () => {
   return (
     <div className="pageContainer">
-      <div className="textSection mt-28 lg:mt-0 ">
+      <div className="textSection mt-10 lg:mt-0 ">
         <h3 className="smallHeading text-xl text-slate-500">
           so,you want to travel to
         </h3>
