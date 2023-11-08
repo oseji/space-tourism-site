@@ -8,8 +8,6 @@ import europa from "./assets/destination/image-europa.png";
 import titan from "./assets/destination/image-titan.png";
 
 const Destination = () => {
-  //console.log(dataFile);
-
   const [destinationName, setDestinationName] = useState("moon");
   const [destinationNum, setDestinationNum] = useState(0);
   const [destinationImg, setDestinationImg] = useState(moon);
@@ -81,9 +79,14 @@ const Destination = () => {
 
         <h1 className="text-7xl font-bold uppercase">{destinationName}</h1>
 
-        <p className="destinationDescription">
+        <motion.p
+          initial={{ opacity: 0, x: 400 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.5 }}
+          className="destinationDescription"
+        >
           {dataFile.destinations[destinationNum].description}
-        </p>
+        </motion.p>
 
         <div className="destinationInfo">
           <div>

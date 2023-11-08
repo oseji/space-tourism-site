@@ -10,6 +10,9 @@ export default {
       translate: {
         120: "500px",
       },
+      height: {
+        110: "200px",
+      },
       backgroundImage: {
         homeMobile: "url('./src/assets/home/background-home-mobile.jpg')",
         homeTablet: "url('./src/assets/home/background-home-tablet.jpg')",
