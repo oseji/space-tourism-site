@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 const Home = () => {
   return (
-    <div className="pageContainer">
+    <div className="pageContainer bg-cover bg-[url('./assets/home/background-home-mobile.jpg')]  md:bg-[url('./assets/home/background-home-tablet.jpg')]  lg:bg-[url('./assets/home/background-home-desktop.jpg')]">
       <motion.div
         initial={{ x: -250, opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}

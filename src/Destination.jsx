@@ -13,7 +13,7 @@ const Destination = () => {
   const [destinationImg, setDestinationImg] = useState(moon);
 
   return (
-    <div className="pageContainer">
+    <div className="pageContainer  bg-cover bg-[url('./assets/destination/background-destination-mobile.jpg')]  md:bg-[url('./assets/destination/background-destination-tablet.jpg')]  lg:bg-[url('./assets/destination/background-destination-desktop.jpg')]">
       <motion.div
         initial={{ x: 250, opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
