@@ -28,7 +28,9 @@ const Crew = () => {
           {dataFile.crew[crewNum].role}
         </h3>
 
-        <h1 className="text-6xl mb-10">{dataFile.crew[crewNum].name}</h1>
+        <h1 className="text-4xl md:text-6xl mb-10">
+          {dataFile.crew[crewNum].name}
+        </h1>
 
         <p className="crewBio">{dataFile.crew[crewNum].bio}</p>
 

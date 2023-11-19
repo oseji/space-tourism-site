@@ -77,7 +77,9 @@ const Destination = () => {
           </p>
         </div>
 
-        <h1 className="text-7xl font-bold uppercase">{destinationName}</h1>
+        <h1 className="text-5xl md:text-7xl font-bold uppercase">
+          {destinationName}
+        </h1>
 
         <motion.p
           initial={{ opacity: 0, x: 400 }}
