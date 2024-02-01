@@ -2,6 +2,8 @@ import { useRef, useState } from "react";
 import { BrowserRouter as Route, Switch, Link } from "react-router-dom";
 import { motion } from "framer-motion";
 
+import dataFile from "./data.json";
+
 import Home from "./Home";
 import Destination from "./Destination";
 import Crew from "./Crew";
@@ -92,15 +94,15 @@ function App() {
           </Route>
 
           <Route path="/Destination">
-            <Destination></Destination>
+            <Destination data={dataFile}></Destination>
           </Route>
 
           <Route path="/Crew">
-            <Crew></Crew>
+            <Crew data={dataFile}></Crew>
           </Route>
 
           <Route path="/Technology">
-            <Technology></Technology>
+            <Technology data={dataFile}></Technology>
           </Route>
         </Switch>
       </div>

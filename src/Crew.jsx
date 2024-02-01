@@ -1,13 +1,12 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import dataFile from "./data.json";
 
 import Anousheh from "./assets/crew/image-anousheh-ansari.png";
 import Victor from "./assets/crew/image-victor-glover.png";
 import Mark from "./assets/crew/image-mark-shuttleworth.png";
 import Douglas from "./assets/crew/image-douglas-hurley.png";
 
-const Crew = () => {
+const Crew = (props) => {
   const [crewNum, setCrewNum] = useState(3);
   const [crewImg, setCrewImg] = useState(Anousheh);
 
@@ -25,14 +24,14 @@ const Crew = () => {
         </div>
 
         <h3 className="text-3xl text-slate-500">
-          {dataFile.crew[crewNum].role}
+          {props.data.crew[crewNum].role}
         </h3>
 
         <h1 className="text-4xl md:text-6xl mb-10">
-          {dataFile.crew[crewNum].name}
+          {props.data.crew[crewNum].name}
         </h1>
 
-        <p className="crewBio">{dataFile.crew[crewNum].bio}</p>
+        <p className="crewBio">{props.data.crew[crewNum].bio}</p>
 
         <div className="crewSelection">
           <div

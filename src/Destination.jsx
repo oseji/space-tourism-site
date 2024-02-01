@@ -1,13 +1,12 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import dataFile from "./data.json";
 
 import moon from "./assets/destination/image-moon.png";
 import mars from "./assets/destination/image-mars.png";
 import europa from "./assets/destination/image-europa.png";
 import titan from "./assets/destination/image-titan.png";
 
-const Destination = () => {
+const Destination = (props) => {
   const [destinationName, setDestinationName] = useState("moon");
   const [destinationNum, setDestinationNum] = useState(0);
   const [destinationImg, setDestinationImg] = useState(moon);
@@ -87,21 +86,21 @@ const Destination = () => {
           transition={{ duration: 0.5 }}
           className="destinationDescription"
         >
-          {dataFile.destinations[destinationNum].description}
+          {props.data.destinations[destinationNum].description}
         </motion.p>
 
         <div className="destinationInfo">
           <div>
             <p className="text-sm">AVG. DISTANCE</p>
             <p className="text-xl lg:text-3xl">
-              {dataFile.destinations[destinationNum].distance}
+              {props.data.destinations[destinationNum].distance}
             </p>
           </div>
 
           <div>
             <p className="text-sm">EST. TRAVEL TIME</p>
             <p className="text-xl lg:text-3xl">
-              {dataFile.destinations[destinationNum].travel}
+              {props.data.destinations[destinationNum].travel}
             </p>
           </div>
         </div>

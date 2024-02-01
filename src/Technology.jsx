@@ -1,32 +1,25 @@
 import { useState, useRef } from "react";
 import { motion } from "framer-motion";
-import dataFile from "./data.json";
 
 import launchVehicle from "./assets/technology/image-launch-vehicle-portrait.jpg";
 import spacePort from "./assets/technology/image-spaceport-portrait.jpg";
 import spaceCapsule from "./assets/technology/image-space-capsule-portrait.jpg";
 
-const Technology = () => {
+const Technology = (props) => {
   const [techHeading, setTechHeading] = useState(0);
   const [techImg, setTechImg] = useState(launchVehicle);
   const numberRefs = [useRef(null), useRef(null), useRef(null)];
 
   const changeActiveNum = (e) => {
-    // const num = e.target;
-    // if (!num.classList.contains("techNumActive")) {
-    //   num.classList.add("techNumActive");
-    // } else {
-    //   num.classList.remove("techNumActive");
-    // }
-    // numberRefs.forEach((ref) => {
-    //   const num = ref.current;
-    //   console.log(num);
-    //   if (!num.classList.contains("techNumActive")) {
-    //     num.classList.toggle("techNumActive");
-    //   } else {
-    //     num.classList.toggle("techNumActive");
-    //   }
-    // });
+    const num = e.target;
+
+    num.classList.add("techNumActive");
+
+    numberRefs.forEach((ref) => {
+      if (ref.current !== num) {
+        ref.current.classList.remove("techNumActive");
+      }
+    });
   };
 
   return (
@@ -83,10 +76,10 @@ const Technology = () => {
             <h3 className="text-slate-500 font-bold">THE TERMINOLOGY....</h3>
 
             <h1 className="text-5xl font-bold uppercase mb-5">
-              {dataFile.technology[techHeading].name}
+              {props.data.technology[techHeading].name}
             </h1>
 
-            <p>{dataFile.technology[techHeading].description}</p>
+            <p>{props.data.technology[techHeading].description}</p>
           </div>
         </div>
       </motion.div>
